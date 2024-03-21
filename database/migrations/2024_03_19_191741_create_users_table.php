@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('lastname');
-            $table->integer('phone');
-            $table->string('mail');
+            $table->string('phone');
+            $table->integer('age');
+            $table->string('email');
             $table->decimal('size');
             $table->decimal('weight');
             $table->timestamps();
+            $table->boolean('isDelete')->default(false);
         });
     }
 
